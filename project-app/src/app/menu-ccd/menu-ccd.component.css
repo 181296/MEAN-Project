@@ -1,0 +1,114 @@
+.navi {
+    height: 13vh;
+    background: whitesmoke;
+}
+
+#swiggy {
+    height: 70px;
+    width: 70px;
+}
+
+#cid {
+    width: 15vw;
+}
+
+.main {
+    height: 100vh;
+}
+
+.mid-div {
+    height: 20vh;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 50px;
+
+
+}
+
+.main-row {
+    display: flex;
+    justify-content:center;
+    margin: 30px;
+}
+
+.menu-col{
+    display:flex; 
+     justify-content:center; 
+     align-items:center; 
+     margin: 10px;
+    border-bottom: 1px solid black;
+}
+
+.menu-name{
+    color: black; 
+    font-size: 24px;
+}
+
+.menu-price{
+    color: black; 
+    font-size: 16px;
+}
+
+#add-btn{
+    border: 1px solid black;
+    color: black;
+}
+#img-f {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15%;
+    height: 15%;
+    object-fit: cover;
+    margin-top: 13px;
+}
+
+
+.footer {
+    height: 8vh;
+    background: whitesmoke;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 50px;
+}
+
+.resto-name {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.resto-info {
+    color: gray;
+    font-size: 16px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#idf {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.city{
+    font-size: 36px;
+}
+
+.tag{
+    font-size: 20px;
+}

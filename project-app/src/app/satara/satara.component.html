@@ -1,0 +1,96 @@
+<div class="container-fluid">
+    <!--nav bar-->
+    <div class="row navi sticky-top">
+        <div class="col-4 d-flex align-items-center justify-content-between">
+            <img id="swiggy" src="assets/img/swiggy.jpeg" alt="swiggy">
+            <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+                <button class="btn btn-outline-warning f-light mr-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()" > Enter City </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownManual">
+                    <a routerLink="/bhilai" ngbDropdownItem>Bhilai</a>
+                    <a routerLink="/mumbai" ngbDropdownItem>Mumbai</a>
+                    <a routerLink="/satara" ngbDropdownItem>Satara</a>
+                    <a routerLink="/pune" ngbDropdownItem>Pune</a>    
+                </div>
+            </div>
+        </div>
+        <div class="col-8 d-flex align-items-center justify-content-end">
+            <input type="button" class="btn btn-dark mr-3" value="Home" />
+            <input type="button" class="btn btn-danger mr-3" value="About Us" />
+            <input type="button" class="btn btn-danger mr-3" value="Offers" />
+            <input type="button" class="btn btn-danger mr-3" value="Sign In" />
+            <input type="button" class="btn btn-danger mr-3" value="Cart" />
+
+        </div>
+    </div>
+
+    <!--middle div-->
+    <div class="row mid-div">
+        <div class="city">
+            <i class="fa fa-map-marker" id="i"></i>
+            {{cityName}}
+        </div>
+        <div class="info">
+            Hungry and Tired? <br>
+            These restaurants deliver to you fast
+        </div>
+    </div>
+
+    <!--restaurants-->
+    <div class="row row1">
+        <div class="col-3 col-div m-4">
+            <img id="img-f" src="assets/img/domino's.jpg" alt="home">
+            <div class="resto-name">
+                {{resto1}}
+            </div>
+            <div class="resto-info">
+                {{restoInfo1}}
+            </div>
+            <div class="btn">
+                <button routerLink="/menu-dominos" class="btn bg-secondary">
+                    {{btn}}
+                </button>
+            </div>
+
+        </div>
+        <div class="col-3 col-div m-4">
+            <img id="img-f" src="assets/img/macdy.jpg" alt="home">
+
+            <div class="resto-name">
+                {{resto2}}
+            </div>routerLink="/menu-dominos"
+            <div class="resto-info">
+                {{restoInfo2}}
+            </div>
+            <div class="btn">
+                <button routerLink="/menu-macdy" class="btn bg-secondary">
+                    {{btn}}
+                </button>
+            </div>
+        </div>
+        <div class="col-3 col-div m-4">
+            <img id="img-f" src="assets/img/city4_3.jpg" alt="home">
+
+            <div class="resto-name">
+                {{resto3}}
+            </div>
+            <div class="resto-info">
+                {{restoInfo3}}
+            </div>
+            <div class="btn">
+                <button routerLink="/menu-amrapali" class="btn bg-secondary">
+                    {{btn}}
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="row footer">
+        Rich out to us on:
+        <i class="fa fa-twitter" id="idf"></i>
+        <i class="fa fa-linkedin" id="idf"></i>
+        <i class="fa fa-facebook-official" id="idf"></i>
+        <i class="fa fa-whatsapp" id="idf"></i>
+    </div>
+
+</div>

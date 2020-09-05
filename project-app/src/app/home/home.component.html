@@ -1,0 +1,71 @@
+<div class="container-fluid">
+    <div class="row navi sticky-top">
+        <div class="col-4 d-flex align-items-center justify-content-between">
+            <img id="swiggy" src="./assets/Swiggy.jpg" alt="swiggy">
+            
+            <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+                <button class="btn btn-outline-warning f-light mr-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()" > Enter City </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownManual">
+                    <a routerLink="/bhilai" ngbDropdownItem>Bhilai</a>
+                    <a routerLink="/mumbai" ngbDropdownItem>Mumbai</a>
+                    <a routerLink="/satara" ngbDropdownItem>Satara</a>
+                    <a routerLink="/pune" ngbDropdownItem>Pune</a>    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-8 d-flex align-items-center justify-content-end">
+            <input routerLink="/home" type="button" class="btn btn-dark mr-3" value="Home" />
+            <input routerLink="/About Us"  type="button" class="btn btn-danger mr-3" value="About Us" />
+            <input routerLink="/Offers"  type="button" class="btn btn-danger mr-3" value="Offers" />
+            <input routerLink="/signup"  type="button" class="btn btn-danger mr-3" value="Sign In" />
+            <input routerLink="/Cart"  type="button" class="btn btn-danger mr-3" value="Cart" />
+
+        </div>
+    </div>
+
+    <div class="row main bg-info">
+        <div class="col-6 bg-danger left-col">
+            <div id="left-div1">
+                Find the best meals in the city
+            </div>
+            <div id="left-div2">
+                Fresh, delicious meal plans to reach your optimum health & fitness
+            </div>
+
+        </div>
+        <div class="col-6 bg-success">
+            <img id="home-img" src="./assets/home.jpeg" alt="home">
+        </div>
+    </div>
+
+    <div class="row main-2 ">
+        <div class="row text-white mt-4" style="font-size: 32px;">
+            How Swiggy works
+        </div>
+        <div class="row ">
+            <div class="col-4 img-div" style="height: 40vh; width: 30vw; color: white; font-size: 20px;">
+                <img id="img-f" src="./assets/footer1.jpeg" alt="home">
+                Explore restaurants that deliver to your doorstep
+            </div>
+            <div class="col-4 img-div  " style="height: 40vh; width: 30vw;  color: white; font-size: 20px;">
+                <img id="img-f" src="./assets/footer2.jpeg" alt="home">
+                Browse menus and build your order in seconds
+            </div>
+            <div class="col-4 img-div " style="height: 40vh; width: 30vw;  color: white; font-size: 20px;">
+                <img id="img-f" src="./assets/footer3.jpeg" alt="home">
+                We will deliver your food with all saftey and precautions
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row footer">
+        Rich out to us on:
+        <i class="fa fa-twitter" style="font-size:25px; margin-left: 10px;"></i>
+        <i class="fa fa-linkedin" style="font-size:25px; margin-left: 10px;"></i>
+        <i class="fa fa-facebook-official" style="font-size:25px; margin-left: 10px;"></i>
+        <i class="fa fa-whatsapp" style="font-size:25px; margin-left: 10px;"></i>
+    </div>
+
+</div>

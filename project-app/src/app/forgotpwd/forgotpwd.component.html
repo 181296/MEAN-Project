@@ -1,0 +1,31 @@
+    <div class="container-fluid">
+        <div class="row b1 justify-content-center align-items-center">
+            <div class="col-5 col-lg-3 myclass" >
+                <span> Forgot Password </span>
+                    <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                        Invalid Email Id!!!
+                    </div>
+                    <div [formGroup]="fbFormGroup">
+                        <div>
+                            <input type="text" id="inputId1" placeholder="Email" class="form-control" formControlName="email"
+                                style="width: 250px; margin-top: 20px;">
+                            <label style="color: red; font-size: small" 
+                            *ngIf="
+                                    fbFormGroup.get('email').invalid && 
+                                    fbFormGroup.get('emial').touched"
+                                    >email required
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div style="margin-top: 20px;">
+                            <button class="btn" style="width: 250px;  background-color: #FC8019; border-radius: 25px;" [disabled]="!fbFormGroup.valid" (click)="forgotCall()">
+                                Reset Password
+                            </button>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>

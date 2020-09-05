@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row b1 justify-content-center align-items-center">
+        <div class="col-5 col-lg-3 myclass">
+            <span> Reset Your Password </span>
+            <div [formGroup]="fbFormGroup">
+                <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                    Password Doesn't Match
+                </div>
+                <div>
+                    <div>
+                        <input type="password" id="inputId2" placeholder="Password" class="form-control" formControlName="password1"
+                            style="margin-top: 20px;">
+                        <label style="color: red; font-size: small" 
+                            *ngIf="
+                                fbFormGroup.get('password1').invalid && 
+                                fbFormGroup.get('password1').touched"
+                                >Password required
+                        </label>
+                    </div>
+                </div>
+                
+                <div>
+                    <div>
+                        <input type="password" id="inputId2" placeholder=" Confirm Password" class="form-control" formControlName="password2"
+                            style="margin-top: 20px;">
+                        <label style="color: red; font-size: small" 
+                            *ngIf="
+                                fbFormGroup.get('password2').invalid && 
+                                fbFormGroup.get('password2').touched"
+                                >Password required
+                        </label>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px;">
+                     <button class="btn" style="width: 250px;  background-color: #FC8019; border-radius: 25px;" [disabled]="!fbFormGroup.valid" (click)="resetUser()">
+                            Reset Password
+                     </button>
+                 </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div> 

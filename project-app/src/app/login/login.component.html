@@ -1,0 +1,48 @@
+    <div class="container-fluid">
+        <div class="row b1 justify-content-center align-items-center">
+            <div class="col-5 col-lg-3 myclass">
+                <span> Login Here </span> <br>
+                <a routerLink="/signup" style="color: #FC8019; margin-bottom: 25px;">or create an account</a>
+                
+                <form [formGroup]="fbFormGroup">
+                    <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                        Invalid Phone Number or Password
+                    </div>
+                    
+                    <div>
+                        <div>
+                            <input type="text" id="inputId1" placeholder="Phone number" class="form-control" formControlName="phone">
+                            <label style="color: red; font-size: small" 
+                            *ngIf="
+                                fbFormGroup.get('phone').invalid && 
+                                fbFormGroup.get('phone').touched"
+                                >phone number required
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <input type="password" id="inputId2" placeholder="Password" class="form-control" formControlName="password"
+                                style="margin-top: 20px;">
+                            <label style="color: red; font-size: small"
+                            *ngIf="
+                                fbFormGroup.get('password').invalid && 
+                                fbFormGroup.get('password').touched"    
+                                >password required
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="margin-top: 20px;">
+                            <button class="btn" style="width: 250px;  background-color: #FC8019; border-radius: 25px;" [disabled]="!fbFormGroup.valid" (click)="checkUser()">
+                               LOGIN
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+                <a style="color: black; margin-top: 20px;" routerLink="./forgotpwd">forgot your password?</a>
+            </div>
+        </div>
+    </div>
